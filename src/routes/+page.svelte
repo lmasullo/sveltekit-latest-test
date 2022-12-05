@@ -334,7 +334,7 @@
 				{/if}
 			{/if}
 		</div>
-		{#if !showAddFact}
+		<!-- {#if !showAddFact}
 			{#each reactiveFacts as fact}
 				<div class="card">
 					<div class="cardHeading">
@@ -378,7 +378,7 @@
 					{/if}
 				</div>
 			{/each}
-		{/if}
+		{/if} -->
 	</div>
 </main>
 
