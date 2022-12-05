@@ -304,7 +304,7 @@
 			{/if}
 
 			<!-- Reactive -->
-			{#if !showAddFact}
+			<!-- {#if !showAddFact}
 				<select id="selectCat" bind:value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each cats as cat}
@@ -333,8 +333,8 @@
 					<div id="loading" class="bold">No Matching Facts</div>
 				{/if}
 			{/if}
-		</div>
-		<!-- {#if !showAddFact}
+		</div> -->
+			<!-- {#if !showAddFact}
 			{#each reactiveFacts as fact}
 				<div class="card">
 					<div class="cardHeading">
@@ -379,6 +379,7 @@
 				</div>
 			{/each}
 		{/if} -->
+		</div>
 	</div>
 </main>
 
