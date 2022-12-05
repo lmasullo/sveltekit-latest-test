@@ -115,7 +115,7 @@
 
 	function reset() {
 		console.log('In reset');
-		document.getElementById('selectCat').selectedIndex = '0';
+		// document.getElementById('selectCat').selectedIndex = '0';
 		checkString = '';
 		facts = origfacts;
 	}
@@ -146,10 +146,10 @@
 		//Change source of favorite image
 		// if (imgClicked === "imgFavBlank") {
 		if (isFav) {
-			document.getElementById(imgId).src = 'favblank.png';
+			// document.getElementById(imgId).src = 'favblank.png';
 			value = false;
 		} else {
-			document.getElementById(imgId).src = 'fav.png';
+			// document.getElementById(imgId).src = 'fav.png';
 			value = true;
 		}
 
@@ -184,8 +184,8 @@
 		let factEdit = `fact-${id}`;
 
 		// Get the value from the textarea
-		let valueTopic = document.getElementById(topicEdit).value;
-		let valueFact = document.getElementById(factEdit).value;
+		// let valueTopic = document.getElementById(topicEdit).value;
+		// let valueFact = document.getElementById(factEdit).value;
 		console.log('Value Topic: ', valueTopic);
 		console.log('Value Fact: ', valueFact);
 
