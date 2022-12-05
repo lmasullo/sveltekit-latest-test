@@ -305,15 +305,22 @@
 
 			<!-- Reactive -->
 			{#if !showAddFact}
-				{#if cats !== null && cats.length > 0}
+				<!-- {#if cats !== null && cats.length > 0}
 					{cats.length}
-				{/if}
+				{/if} -->
 				<!-- <select id="selectCat" value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each cats as cat}
 						<option value={cat.medfactsCatID}>{cat.cat}</option>
 					{/each}
 				</select> -->
+
+				<select id="selectCat">
+					<option value="">Choose a Category</option>
+					<option value="1">Choose a Category 1</option>
+					<option value="2">Choose a Category 2</option>
+					<option value="3">Choose a Category 3</option>
+				</select>
 				<br />
 				or Type to Search:
 				<br />
