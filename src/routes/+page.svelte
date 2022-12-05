@@ -24,30 +24,30 @@
 	let message = '';
 
 	// Anytime facts is changed, the display will be updated
-	$: reactiveFacts = facts;
+	// $: reactiveFacts = facts;
 
 	// Reactive statement for the autocomplete, every time a letter is entered, this is triggered because
 	// checkString changes, it's bound to the text field
-	$: {
-		console.log('In Autocomplete');
-		console.log(checkString);
+	// $: {
+	// 	console.log('In Autocomplete');
+	// 	console.log(checkString);
 
-		// let elSelect = document.getElementById('selectCat');
-		// if (elSelect) {
-		// 	elSelect.selectedIndex = '0';
-		// }
+	// 	// let elSelect = document.getElementById('selectCat');
+	// 	// if (elSelect) {
+	// 	// 	elSelect.selectedIndex = '0';
+	// 	// }
 
-		// Filter based on autocomplete
-		let filteredFacts = origfacts.filter(
-			(fact) =>
-				fact.fact.toLowerCase().includes(checkString.toLowerCase()) ||
-				fact.topic.toLowerCase().includes(checkString.toLowerCase())
-		);
-		console.log('Filtered Facts: ', filteredFacts);
+	// 	// Filter based on autocomplete
+	// 	let filteredFacts = origfacts.filter(
+	// 		(fact) =>
+	// 			fact.fact.toLowerCase().includes(checkString.toLowerCase()) ||
+	// 			fact.topic.toLowerCase().includes(checkString.toLowerCase())
+	// 	);
+	// 	console.log('Filtered Facts: ', filteredFacts);
 
-		// Update facts
-		facts = filteredFacts;
-	}
+	// 	// Update facts
+	// 	facts = filteredFacts;
+	// }
 
 	function fnSelect() {
 		console.log('In fnSelect');
@@ -264,7 +264,7 @@
 		console.log('The Index Page has mounted');
 
 		// Set the isLoading variable to false
-		isLoading = false;
+		// isLoading = false;
 	});
 </script>
 
