@@ -23,7 +23,7 @@ export async function load() {
   `;
 		const respAllCategories = await newGraphQLClient.request(getAllCategories);
 		const allCategories = respAllCategories.medfactsCatsList.items;
-		console.log('allCategories: ', allCategories);
+		// console.log('allCategories: ', allCategories);
 
 		// Get all the facts
 		const getAllFacts = `
@@ -44,7 +44,7 @@ export async function load() {
     `;
 		const respAllFacts = await newGraphQLClient.request(getAllFacts);
 		const allFacts = respAllFacts.medfactsFactsList.items;
-		console.log('allFacts: ', allFacts);
+		// console.log('allFacts: ', allFacts);
 
 		// End timer
 		// const afterAllTypes = Date.now();
