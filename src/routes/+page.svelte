@@ -305,12 +305,12 @@
 
 			<!-- Reactive -->
 			{#if !showAddFact}
-				<select id="selectCat" bind:value={selected} on:change={fnSelect}>
+				<!-- <select id="selectCat" bind:value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each cats as cat}
 						<option value={cat.medfactsCatID}>{cat.cat}</option>
 					{/each}
-				</select>
+				</select> -->
 				<br />
 				or Type to Search:
 				<br />
