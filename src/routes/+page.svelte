@@ -304,7 +304,7 @@
 			{/if}
 
 			<!-- Reactive -->
-			<!-- {#if !showAddFact}
+			{#if !showAddFact}
 				<select id="selectCat" bind:value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each cats as cat}
@@ -319,7 +319,7 @@
 				<button class="btn btnSecondary" on:click={showFavs}>Just Favorites</button>
 				<button class="btn btnWarning" on:click={reset}>Clear Filters</button>
 
-				<div>Number of Facts: {reactiveFacts.length}</div>
+				<!-- <div>Number of Facts: {reactiveFacts.length}</div> -->
 				<br />
 				<div>
 					<strong>Click Topic to Edit Fact</strong>
@@ -333,7 +333,7 @@
 					<div id="loading" class="bold">No Matching Facts</div>
 				{/if}
 			{/if}
-		</div> -->
+			<!-- </div> -->
 			<!-- {#if !showAddFact}
 			{#each reactiveFacts as fact}
 				<div class="card">
