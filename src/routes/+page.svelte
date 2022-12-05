@@ -284,12 +284,12 @@
 			{#if showAddFact}
 				<div id="divAddFact">
 					<!-- <select bind:value={selectedNew}> -->
-					<select id="selectCatNew" bind:value={selectedNew}>
+					<!-- <select id="selectCatNew" bind:value={selectedNew}>
 						<option value="">Choose a Category New</option>
 						{#each cats as cat}
 							<option value={cat.medfactsCatID}>{cat.cat}</option>
 						{/each}
-					</select>
+					</select> -->
 					<br />
 					<label for="textTopic">Topic</label>
 					<br />
@@ -305,12 +305,15 @@
 
 			<!-- Reactive -->
 			{#if !showAddFact}
-				<select id="selectCat" value={selected} on:change={fnSelect}>
+				{#if cats !== null && cats.length > 0}
+					{cats.length}
+				{/if}
+				<!-- <select id="selectCat" value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each cats as cat}
 						<option value={cat.medfactsCatID}>{cat.cat}</option>
 					{/each}
-				</select>
+				</select> -->
 				<br />
 				or Type to Search:
 				<br />
