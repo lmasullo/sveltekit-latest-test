@@ -24,7 +24,7 @@
 	let message = '';
 
 	// Anytime facts is changed, the display will be updated
-	$: reactiveFacts = data.allFacts;
+	// $: reactiveFacts = data.allFacts;
 
 	// Reactive statement for the autocomplete, every time a letter is entered, this is triggered because
 	// checkString changes, it's bound to the text field
