@@ -333,7 +333,7 @@
 					<div id="loading" class="bold">No Matching Facts</div>
 				{/if} -->
 			{/if}
-		</div>
+			<!-- </div> -->
 			<!-- {#if !showAddFact}
 			{#each reactiveFacts as fact}
 				<div class="card">
