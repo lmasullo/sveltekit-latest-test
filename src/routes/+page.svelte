@@ -305,7 +305,7 @@
 
 			<!-- Reactive -->
 			{#if !showAddFact}
-				<!-- <select id="selectCat" bind:value={selected} on:change={fnSelect}>
+				<select id="selectCat" bind:value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each cats as cat}
 						<option value={cat.medfactsCatID}>{cat.cat}</option>
@@ -319,7 +319,7 @@
 				<button class="btn btnSecondary" on:click={showFavs}>Just Favorites</button>
 				<button class="btn btnWarning" on:click={reset}>Clear Filters</button>
 
-				<div>Number of Facts: {reactiveFacts.length}</div>
+				<!-- <div>Number of Facts: {reactiveFacts.length}</div> -->
 				<br />
 				<div>
 					<strong>Click Topic to Edit Fact</strong>
@@ -329,56 +329,56 @@
 					<div id="loading" class="bold">Loading...</div>
 				{/if}
 
-				{#if facts.length === 0 && isLoading === false}
+				<!-- {#if facts.length === 0 && isLoading === false}
 					<div id="loading" class="bold">No Matching Facts</div>
 				{/if} -->
 			{/if}
 			<!-- </div> -->
-			<!-- {#if !showAddFact}
-			{#each reactiveFacts as fact}
-				<div class="card">
-					<div class="cardHeading">
-						{#if edit === fact.id}
-							<input id="topic-{fact.id}" type="text" class="inputEl" value={fact.topic} />
-						{:else}
-							<div id="cardTopic" on:click={() => fnEdit(fact.id)}>
-								{fact.topic}
-							</div>
-						{/if}
-						<div id="favorite">
-							{#if fact.favorite === true}
-								<img
-									id="imgFav-{fact.id}"
-									src="fav.png"
-									alt="favorite"
-									on:click={() => fnFav(fact.id, fact.favorite)}
-								/>
+			{#if !showAddFact}
+				<!-- {#each reactiveFacts as fact}
+					<div class="card">
+						<div class="cardHeading">
+							{#if edit === fact.id}
+								<input id="topic-{fact.id}" type="text" class="inputEl" value={fact.topic} />
 							{:else}
-								<img
-									id="imgFav-{fact.id}"
-									src="favblank.png"
-									alt="favorite"
-									on:click={() => fnFav(fact.id, fact.favorite)}
-								/>
+								<div id="cardTopic" on:click={() => fnEdit(fact.id)}>
+									{fact.topic}
+								</div>
 							{/if}
+							<div id="favorite">
+								{#if fact.favorite === true}
+									<img
+										id="imgFav-{fact.id}"
+										src="fav.png"
+										alt="favorite"
+										on:click={() => fnFav(fact.id, fact.favorite)}
+									/>
+								{:else}
+									<img
+										id="imgFav-{fact.id}"
+										src="favblank.png"
+										alt="favorite"
+										on:click={() => fnFav(fact.id, fact.favorite)}
+									/>
+								{/if}
+							</div>
 						</div>
+						{#if edit === fact.id}
+							<div class="edit">
+								<textarea id="fact-{fact.id}" value={fact.fact} />
+								<br />
+								<button class="btn btnSuccess" on:click={() => fnSave(fact.id)}>
+									Save Changes
+								</button>
+								<button class="btn btnDanger" on:click={() => fnDelete(fact.id)}> Delete </button>
+								<button class="btn btnWarning" on:click={fnCancelSave}>Cancel</button>
+							</div>
+						{:else}
+							<div class="fact">{fact.fact}</div>
+						{/if}
 					</div>
-					{#if edit === fact.id}
-						<div class="edit">
-							<textarea id="fact-{fact.id}" value={fact.fact} />
-							<br />
-							<button class="btn btnSuccess" on:click={() => fnSave(fact.id)}>
-								Save Changes
-							</button>
-							<button class="btn btnDanger" on:click={() => fnDelete(fact.id)}> Delete </button>
-							<button class="btn btnWarning" on:click={fnCancelSave}>Cancel</button>
-						</div>
-					{:else}
-						<div class="fact">{fact.fact}</div>
-					{/if}
-				</div>
-			{/each}
-		{/if} -->
+				{/each} -->
+			{/if}
 		</div>
 	</div>
 </main>
