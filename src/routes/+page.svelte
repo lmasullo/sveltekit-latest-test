@@ -305,19 +305,19 @@
 
 			<!-- Reactive -->
 			{#if !showAddFact}
-				<select id="selectCat" bind:value={selected} on:change={fnSelect}>
+				<!-- <select id="selectCat" bind:value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each cats as cat}
 						<option value={cat.medfactsCatID}>{cat.cat}</option>
 					{/each}
-				</select>
+				</select> -->
 				<br />
 				or Type to Search:
 				<br />
-				<input type="text" class="inputEl" bind:value={checkString} />
+				<!-- <input type="text" class="inputEl" bind:value={checkString} />
 				<br />
 				<button class="btn btnSecondary" on:click={showFavs}>Just Favorites</button>
-				<button class="btn btnWarning" on:click={reset}>Clear Filters</button>
+				<button class="btn btnWarning" on:click={reset}>Clear Filters</button> -->
 
 				<!-- <div>Number of Facts: {reactiveFacts.length}</div> -->
 				<br />
@@ -325,9 +325,9 @@
 					<strong>Click Topic to Edit Fact</strong>
 				</div>
 
-				{#if isLoading}
+				<!-- {#if isLoading}
 					<div id="loading" class="bold">Loading...</div>
-				{/if}
+				{/if} -->
 
 				<!-- {#if facts.length === 0 && isLoading === false}
 					<div id="loading" class="bold">No Matching Facts</div>
