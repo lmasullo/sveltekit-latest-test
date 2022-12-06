@@ -13,7 +13,8 @@
 	let selectedNew;
 	let newTopic;
 	let newFact;
-	let cats = data.allCategories;
+	// let cats = data.allCategories;
+	let cats = [];
 	let facts = data.allFacts;
 	let origfacts = data.allFacts;
 	let edit;
@@ -264,6 +265,8 @@
 
 		// Set the isLoading variable to false
 		isLoading = false;
+
+		cats = data.allCategories;
 	});
 </script>
 
@@ -325,7 +328,7 @@
 				<br />
 				or Type to Search:
 				<br />
-				{#each data.allCategories as cat}
+				{#each cats as cat}
 					{cat.cat}
 				{/each}
 				<!-- <input type="text" class="inputEl" bind:value={checkString} />
