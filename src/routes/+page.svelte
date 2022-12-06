@@ -320,10 +320,14 @@
 					<option value="1">Choose a Category 1</option>
 					<option value="2">Choose a Category 2</option>
 					<option value="3">Choose a Category 3</option>
+					<option value="4">Choose a Category 4</option>
 				</select>
 				<br />
 				or Type to Search:
 				<br />
+				{#each data.allCategories as cat}
+					{cat.cat}
+				{/each}
 				<!-- <input type="text" class="inputEl" bind:value={checkString} />
 				<br />
 				<button class="btn btnSecondary" on:click={showFavs}>Just Favorites</button>
