@@ -308,12 +308,12 @@
 				<!-- {#if cats !== null && cats.length > 0}
 					{cats.length}
 				{/if} -->
-				<!-- <select id="selectCat" value={selected} on:change={fnSelect}>
+				<select id="selectCat" value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
-					{#each cats as cat}
+					{#each data.allCategories as cat}
 						<option value={cat.medfactsCatID}>{cat.cat}</option>
 					{/each}
-				</select> -->
+				</select>
 
 				<select id="selectCat">
 					<option value="">Choose a Category</option>
