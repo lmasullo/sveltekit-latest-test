@@ -15,7 +15,7 @@
 	let newFact;
 	// let cats = data.allCategories;
 	let cats = [];
-	let facts = data.allFacts;
+	let facts = [];
 	let origfacts = data.allFacts;
 	let edit;
 	let checkString = '';
@@ -24,7 +24,7 @@
 	let reactiveFacts = [];
 
 	// Anytime facts is changed, the display will be updated
-	// $: reactiveFacts = facts;
+	$: reactiveFacts = facts;
 
 	// Reactive statement for the autocomplete, every time a letter is entered, this is triggered because
 	// checkString changes, it's bound to the text field
@@ -267,6 +267,7 @@
 		isLoading = false;
 
 		cats = data.allCategories;
+		facts = data.allFacts;
 	});
 </script>
 
@@ -318,25 +319,25 @@
 					{/each}
 				</select>
 
-				<select id="selectCat">
+				<!-- <select id="selectCat">
 					<option value="">Choose a Category</option>
 					<option value="1">Choose a Category 1</option>
 					<option value="2">Choose a Category 2</option>
 					<option value="3">Choose a Category 3</option>
 					<option value="4">Choose a Category 4</option>
-				</select>
+				</select> -->
 				<br />
 				or Type to Search:
 				<br />
-				{#each cats as cat}
+				<!-- {#each cats as cat}
 					{cat.cat}
-				{/each}
-				<!-- <input type="text" class="inputEl" bind:value={checkString} />
+				{/each} -->
+				<input type="text" class="inputEl" bind:value={checkString} />
 				<br />
 				<button class="btn btnSecondary" on:click={showFavs}>Just Favorites</button>
-				<button class="btn btnWarning" on:click={reset}>Clear Filters</button> -->
+				<button class="btn btnWarning" on:click={reset}>Clear Filters</button>
 
-				<!-- <div>Number of Facts: {reactiveFacts.length}</div> -->
+				<div>Number of Facts: {reactiveFacts.length}</div>
 				<br />
 				<div>
 					<strong>Click Topic to Edit Fact</strong>
