@@ -308,7 +308,7 @@
 
 			<!-- Reactive -->
 			{#if !showAddFact}
-				<select id="selectCat" value={selected} on:change={fnSelect}>
+				<select id="selectCat" bind:value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each data.allCategories as cat}
 						<option value={cat.medfactsCatID}>{cat.cat}</option>
