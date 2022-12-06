@@ -28,26 +28,26 @@
 
 	// Reactive statement for the autocomplete, every time a letter is entered, this is triggered because
 	// checkString changes, it's bound to the text field
-	// $: {
-	// 	console.log('In Autocomplete');
-	// 	console.log(checkString);
+	$: {
+		console.log('In Autocomplete');
+		console.log(checkString);
 
-	// 	// let elSelect = document.getElementById('selectCat');
-	// 	// if (elSelect) {
-	// 	// 	elSelect.selectedIndex = '0';
-	// 	// }
+		// let elSelect = document.getElementById('selectCat');
+		// if (elSelect) {
+		// 	elSelect.selectedIndex = '0';
+		// }
 
-	// 	// Filter based on autocomplete
-	// 	let filteredFacts = origfacts.filter(
-	// 		(fact) =>
-	// 			fact.fact.toLowerCase().includes(checkString.toLowerCase()) ||
-	// 			fact.topic.toLowerCase().includes(checkString.toLowerCase())
-	// 	);
-	// 	console.log('Filtered Facts: ', filteredFacts);
+		// Filter based on autocomplete
+		let filteredFacts = origfacts.filter(
+			(fact) =>
+				fact.fact.toLowerCase().includes(checkString.toLowerCase()) ||
+				fact.topic.toLowerCase().includes(checkString.toLowerCase())
+		);
+		console.log('Filtered Facts: ', filteredFacts);
 
-	// 	// Update facts
-	// 	facts = filteredFacts;
-	// }
+		// Update facts
+		facts = filteredFacts;
+	}
 
 	function fnSelect() {
 		console.log('In fnSelect');
@@ -287,13 +287,12 @@
 
 			{#if showAddFact}
 				<div id="divAddFact">
-					<!-- <select bind:value={selectedNew}> -->
-					<!-- <select id="selectCatNew" bind:value={selectedNew}>
+					<select id="selectCatNew" bind:value={selectedNew}>
 						<option value="">Choose a Category New</option>
 						{#each cats as cat}
 							<option value={cat.medfactsCatID}>{cat.cat}</option>
 						{/each}
-					</select> -->
+					</select>
 					<br />
 					<label for="textTopic">Topic</label>
 					<br />
@@ -309,9 +308,6 @@
 
 			<!-- Reactive -->
 			{#if !showAddFact}
-				<!-- {#if cats !== null && cats.length > 0}
-					{cats.length}
-				{/if} -->
 				<select id="selectCat" value={selected} on:change={fnSelect}>
 					<option value="">Choose a Category</option>
 					{#each data.allCategories as cat}
@@ -319,19 +315,10 @@
 					{/each}
 				</select>
 
-				<!-- <select id="selectCat">
-					<option value="">Choose a Category</option>
-					<option value="1">Choose a Category 1</option>
-					<option value="2">Choose a Category 2</option>
-					<option value="3">Choose a Category 3</option>
-					<option value="4">Choose a Category 4</option>
-				</select> -->
 				<br />
 				or Type to Search:
 				<br />
-				<!-- {#each cats as cat}
-					{cat.cat}
-				{/each} -->
+
 				<input type="text" class="inputEl" bind:value={checkString} />
 				<br />
 				<button class="btn btnSecondary" on:click={showFavs}>Just Favorites</button>
@@ -353,7 +340,7 @@
 			{/if}
 			<!-- </div> -->
 			{#if !showAddFact}
-				<!-- {#each reactiveFacts as fact}
+				{#each reactiveFacts as fact}
 					<div class="card">
 						<div class="cardHeading">
 							{#if edit === fact.id}
@@ -395,7 +382,7 @@
 							<div class="fact">{fact.fact}</div>
 						{/if}
 					</div>
-				{/each} -->
+				{/each}
 			{/if}
 		</div>
 	</div>
